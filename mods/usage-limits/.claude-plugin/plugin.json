@@ -1,0 +1,7 @@
+{
+  "name": "usage-limits",
+  "version": "0.1.0",
+  "description": "Five-hour and weekly rate-limit meters above the prompt. Local fork of antiburn 0.2.5 without its branding.",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

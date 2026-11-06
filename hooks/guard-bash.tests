@@ -1,0 +1,69 @@
+# expect<TAB>command   (B = must block, A = must allow)
+B	terraform apply
+B	terraform -chdir=envs/prod apply -auto-approve
+B	/usr/local/bin/terraform destroy
+B	TF_LOG=debug terraform state rm module.x
+B	tofu import aws_s3_bucket.b b
+B	cd x && terraform apply
+B	bash -c 'terraform apply'
+B	sh -c "cd /tmp; tofu destroy"
+B	make tf-apply-all
+B	TERRAFORM_ENV_CONF=x make tf-apply
+B	make -C infra tofu-destroy
+B	kubectl delete pod x
+B	kubectl -n kube-system apply -f x.yaml
+B	kubectl --context prod rollout restart deploy/x
+B	helm upgrade --install x chart
+B	helm -n y uninstall x
+B	aws ec2 terminate-instances --instance-ids i-1
+B	aws s3 rm s3://b/k
+B	aws --profile p eks delete-cluster --name c
+B	rm -rf /tmp/x
+B	rm -Rf x
+B	rm -f -r x
+B	rm --recursive x
+B	/bin/rm -rf build
+B	find . -name '*.tfstate' -delete
+B	git push --force
+B	git push origin main --force
+B	git push -f origin main
+B	git push origin +main
+B	git push --force-with-lease
+B	git reset --hard HEAD~1
+B	git -C /repo reset --hard
+B	git clean -fdx
+B	git branch -D feature
+B	git stash drop
+B	echo ok; kubectl drain node1
+B	ls $(rm -rf x)
+B	dd if=/dev/zero of=/dev/sda
+A	terraform plan -out=apply.tfplan
+A	terraform fmt -recursive -check
+A	terraform init -backend=false
+A	terraform validate
+A	terraform state list
+A	tofu fmt -recursive
+A	make tofu-format
+A	make tf-plan
+A	kubectl get pods -A
+A	kubectl describe deploy x
+A	kubectl logs x | grep delete
+A	kubectl config use-context prod
+A	helm list -A
+A	helm template x chart
+A	aws sts get-caller-identity
+A	aws eks describe-cluster --name c
+A	aws s3 ls s3://b/delete-me
+A	rm -f file.txt
+A	rm build.log
+A	git push
+A	git push origin feature
+A	git status
+A	git diff --stat
+A	git reset HEAD file
+A	git branch -d merged
+A	git stash list
+A	grep -r terraform .
+A	jq . config.json
+A	find . -name '*.tf'
+A	echo "destroy the myth"

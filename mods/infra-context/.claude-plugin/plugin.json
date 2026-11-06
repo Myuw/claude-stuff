@@ -1,0 +1,6 @@
+{
+  "name": "infra-context",
+  "version": "0.1.0",
+  "description": "Band above the prompt: SSO token expiry, last EKS cluster and tofu project Claude targeted, repo and branch; red on prod or expired SSO",
+  "types": "./types/index.d.ts"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "run-by-hand",
+  "version": "0.1.0",
+  "description": "Pane collecting the commands Claude hands you to run (shell blocks in replies) and the Bash calls your guard or deny rules blocked, with copy / to-prompt / done buttons",
+  "types": "./types/index.d.ts"
+}

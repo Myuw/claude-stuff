@@ -1,0 +1,136 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(terraform apply *)",
+      "Bash(terraform destroy *)",
+      "Bash(terraform import *)",
+      "Bash(terraform state rm *)",
+      "Bash(terraform state mv *)",
+      "Bash(terraform taint *)",
+      "Bash(tofu apply *)",
+      "Bash(tofu destroy *)",
+      "Bash(tofu import *)",
+      "Bash(tofu state rm *)",
+      "Bash(tofu state mv *)",
+      "Bash(tofu taint *)",
+      "Bash(make tf-apply *)",
+      "Bash(make tf-apply-all *)",
+      "Bash(make tf-destroy *)",
+      "Bash(make tf-state-rm *)",
+      "Bash(make tf-state-rm-all *)",
+      "Bash(make tofu-apply *)",
+      "Bash(make tofu-destroy *)",
+      "Bash(make tofu-import *)",
+      "Bash(kubectl delete *)",
+      "Bash(kubectl drain *)",
+      "Bash(kubectl apply *)",
+      "Bash(kubectl patch *)",
+      "Bash(kubectl scale *)",
+      "Bash(kubectl replace *)",
+      "Bash(kubectl rollout *)",
+      "Bash(helm install *)",
+      "Bash(helm upgrade *)",
+      "Bash(helm uninstall *)",
+      "Bash(helm rollback *)",
+      "Bash(aws * delete*)",
+      "Bash(aws * terminate*)",
+      "Bash(rm -rf *)",
+      "Bash(rm -fr *)",
+      "Bash(rm -r *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git reset --hard *)",
+      "Bash(git clean *)",
+      "Bash(git branch -D *)",
+      "Bash(git stash drop *)",
+      "Agent(octo:personas:cloud-architect)",
+      "Agent(octo:droids:octo-cloud-architect)",
+      "Agent(octo:personas:devops-troubleshooter)",
+      "Agent(octo:personas:debugger)",
+      "Agent(octo:droids:octo-debugger)",
+      "Agent(octo:personas:incident-responder)",
+      "Agent(octo:personas:deployment-engineer)",
+      "Agent(codex:codex-rescue)"
+    ],
+    "ask": [
+      "Bash(sed -i *)",
+      "Bash(git push *)",
+      "Bash(git restore *)",
+      "Bash(git checkout -- *)",
+      "Bash(git stash *)"
+    ],
+    "blockReadsOutsideWorkingDirectories": true,
+    "additionalDirectories": [
+      "/tmp",
+      "__HOME__/.claude",
+      "__HOME__/.cache/helm"
+    ]
+  },
+  "model": "opus",
+  "enabledPlugins": {
+    "codex@openai-codex": true,
+    "humanizer@humanizer": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "cc-plugin-you-should-know@builtin": true,
+    "filetree@claude-code-filetree": true,
+    "context-bar@claude-code-mods": false,
+    "antiburn@antiburn": false
+  },
+  "pluginConfigs": {
+    "filetree@claude-code-filetree": {
+      "options": {
+        "start": "off"
+      }
+    }
+  },
+  "env": {
+    "CLAUDE_CODE_PLUGIN_DIRS": "__HOME__/.claude/mods/usage-limits"
+  },
+  "extraKnownMarketplaces": {
+    "nyldn-plugins": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/nyldn/claude-octopus.git"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
+    },
+    "claude-code-filetree": {
+      "source": {
+        "source": "github",
+        "repo": "data-goblin/claude-code-filetree"
+      }
+    },
+    "claude-code-mods": {
+      "source": {
+        "source": "github",
+        "repo": "hamzafer/claude-code-mods"
+      }
+    },
+    "antiburn": {
+      "source": {
+        "source": "github",
+        "repo": "antiburn/antiburn"
+      }
+    }
+  },
+  "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
+  "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
+  "switchModelsOnFlag": false
+}
